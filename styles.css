@@ -1,0 +1,50 @@
+#map {
+    height: 1000px;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+  }
+  
+  .logo-container {
+    position: absolute;
+    top: 10px; /* Adjust the distance from the top as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+  
+  .logo-container img {
+    max-width: 100%;
+    height: auto; /* Maintain the aspect ratio */
+    max-height: 200px; /* Set a maximum height for the logo */
+  }
+  
+  .ride-completion-btn {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  /* Media query for mobile devices */
+  @media only screen and (max-width: 767px) {
+    .logo-container {
+      top: 5px; /* Adjust the distance from the top for smaller screens */
+    }
+  
+    .logo-container img {
+      max-height: 450px; /* Adjust the maximum height for smaller screens */
+    }
+  
+    .ride-completion-btn {
+      bottom: 40px; /* Adjust the distance from the bottom for smaller screens */
+    }
+  }
+  
