@@ -18,6 +18,18 @@ const firebaseConfig = {
     attribution: '© OpenStreetMap contributors'
   }).addTo(mymap);
   
+
+  // Add static image overlay for parking zones with the same size
+const parkingZoneImage1 = L.imageOverlay('parking.png', [[12.9846, 79.9703], [12.9861, 79.9722]], { opacity: 1 });
+parkingZoneImage1.addTo(mymap);
+
+// Add another static image overlay for a different location with the same size
+const parkingZoneImage2 = L.imageOverlay('parking.png', [[12.9876, 79.9740], [12.9893, 79.9757]], { opacity: 1 });
+parkingZoneImage2.addTo(mymap);
+
+const parkingZoneImage3 = L.imageOverlay('parking.png', [[12.9885, 79.9699], [12.9902, 79.9717]], { opacity: 1 });
+parkingZoneImage3.addTo(mymap);
+  
   // Function to plot bicycle on the map
   function plotBicycleOnMap(bicycleNumber, admissionNumber, lat, lng) {
     // Define the custom icon
